@@ -66,6 +66,7 @@ function savenote(event){
   noteContent.value=''
   renderNotes()
   closeNoteDialog()
+  saveNotes()
   console.log(notes);
   
 
@@ -134,8 +135,14 @@ function toggleTheme(){
 
 }
 
+function saveNotes(){
+  localStorage.setItem("notes",JSON.stringify(notes))
+}
 
-
+function getNotes(){
+const savedNotes= localStorage.getItem("notes")
+return savedNotes ? JSON.parse(savedNotes):[]
+}
 
 
 
@@ -145,6 +152,8 @@ document.getElementById("noteForm").addEventListener("submit",savenote)
 
 document.getElementById("themeToggleBtn").addEventListener("click",toggleTheme)
 
+
+notes=getNotes()
  
   
 })
