@@ -126,10 +126,10 @@ function deleteNote(noteId){
 
 
 function toggleTheme(){
-   themeToggleBtn.addEventListener("click",()=>{
+   
   const isDark= document.body.classList.toggle("dark-theme")
   themeToggleBtn.textContent=isDark?'☀️':'🌙'
-  })
+  
 
 
 }
@@ -137,9 +137,13 @@ function toggleTheme(){
 
 
 
+
+
 document.addEventListener("DOMContentLoaded",()=>{
   renderNotes()
 document.getElementById("noteForm").addEventListener("submit",savenote)
+
+document.getElementById("themeToggleBtn").addEventListener("click",toggleTheme)
 
  
   
