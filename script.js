@@ -147,13 +147,14 @@ return savedNotes ? JSON.parse(savedNotes):[]
 
 
 document.addEventListener("DOMContentLoaded",()=>{
-  renderNotes()
+notes=getNotes()
+renderNotes()
 document.getElementById("noteForm").addEventListener("submit",savenote)
 
 document.getElementById("themeToggleBtn").addEventListener("click",toggleTheme)
 
 
-notes=getNotes()
+
  
   
 })
