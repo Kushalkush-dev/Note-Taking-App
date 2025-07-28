@@ -129,8 +129,8 @@ function deleteNote(noteId){
 function toggleTheme(){
    
   const isDark= document.body.classList.toggle("dark-theme")
+  localStorage.setItem("theme",isDark?'dark':'light')
   themeToggleBtn.textContent=isDark?'☀️':'🌙'
-  
 
 
 }
@@ -144,11 +144,20 @@ const savedNotes= localStorage.getItem("notes")
 return savedNotes ? JSON.parse(savedNotes):[]
 }
 
+function getTheme(){
+ if(localStorage.getItem("theme")=='dark') {
+  themeToggleBtn.textContent='☀️'
+  document.body.classList.add('dark-theme')
+ }
+  
+}
+
 
 
 document.addEventListener("DOMContentLoaded",()=>{
 notes=getNotes()
 renderNotes()
+getTheme()
 document.getElementById("noteForm").addEventListener("submit",savenote)
 
 document.getElementById("themeToggleBtn").addEventListener("click",toggleTheme)
