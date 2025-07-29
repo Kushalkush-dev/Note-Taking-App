@@ -6,7 +6,13 @@
   box-sizing: border-box;
 }
 
+
 :root {
+  --background-image:linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+        linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+  --background-color:#f8fafc;
+  --background-size: 40px 40px;
+      
   --brand-color: oklch(62.7% 0.194 149.214);
   --base-color: #f2f4f8;
   --surface-color: #fff;
@@ -17,6 +23,12 @@
 }
 
 .dark-theme {
+   --background-image:linear-gradient(to right, rgba(75, 85, 99, 0.4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(75, 85, 99, 0.4) 1px, transparent 1px);
+  --background-color:#000000;
+  --background-size: 40px 40px;
+
+
   --brand-color: oklch(57.325% 0.16455 147.934);
   --base-color: #1e1f26;
   --surface-color: #2c2f38;
@@ -29,7 +41,9 @@
 body {
   font-family: Poppins, sans-serif;
   margin: 2rem;
-  background: var(--base-color);
+  background-image: var(--background-image);
+  background-color: var(--background-color);
+  background-size: var(--background-size);
   color: var(--text-color);
 }
 
