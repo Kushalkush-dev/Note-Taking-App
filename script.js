@@ -120,7 +120,7 @@ function deleteNote(noteId){
   notes=notes.filter(note=>{
     return noteId!=note.Id
 })
-
+  saveNotes()
   renderNotes()
   
 }
