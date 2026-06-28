@@ -1,2 +1,2 @@
 A Fully Funtional Notes App with notes store functionality with essential features like edit and delete and save notes.
-Quick, Easy and Fast
+Quick, Easy, Fast and Snappy
