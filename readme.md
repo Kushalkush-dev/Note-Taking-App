@@ -2,3 +2,5 @@ A Fully Funtional Notes App with notes store functionality with essential featur
 Quick, Easy, Fast and reliable 
 
 As simple as it gets & Also as quick as it gets...
+
+By Kushalkush
